@@ -72,7 +72,7 @@ text-align: center;
 }
 
 #cubephoto {
-display: block;
+display: inline-grid;
 justify-content: center;
 text-align: center;
 clear:both;
