@@ -241,6 +241,7 @@ color: black;
 .photo-cube {
   transition: all linear;
   -webkit-transition: all linear;
+  -moz-transition: all linear;	
   width: 220px;
   height: 200px;
   transform-style: preserve-3d;
