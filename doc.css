@@ -69,7 +69,9 @@ text-align: center;
 }
 
 #cubephoto {
-  display: inline-block;
+display: block;
+justify-content: center;
+text-align: center;
 }
 
 
