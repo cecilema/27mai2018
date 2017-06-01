@@ -1,0 +1,286 @@
+* {
+  margin : auto;
+  padding : 0;
+  font-family: 'Handlee', cursive;
+  box-sizing: border-box;
+
+}
+
+header {
+background-color: #0038B8;
+color: white;
+width: 100%;
+text-align: center;
+font-size: 3em;
+ -webkit-border-radius: 20px;
+ -moz-border-radius: 20px;
+ border-radius: 20px;
+ background-image: radial-gradient(circle at top left, white, #0038B8);
+margin-bottom: 60px;
+}
+
+
+article #annonce {
+display: block;
+color: black;
+border: 1px solid black;
+margin-top: 30px;
+margin-bottom: 30px;
+padding: 5px;
+padding-bottom: 30px;
+width: 100%;
+justify-content: center;
+text-align: center;
+height: 60%;
+border-radius: 20px;
+border: 1px solid black;
+}
+
+article p, h3,h2 {
+  font-size: 1.5em;
+  margin-top: 40px;
+  line-height: 10px;
+}
+
+article h2 {
+color:  #0038B8;
+font-size: 3em;
+font-family: "Indie Flower", cursive;
+}
+
+#adresse  {
+display: block;
+color: black;
+margin-top: 30px;
+margin-bottom: 30px;
+padding: 5px;
+padding-bottom: 30px;
+width: 100%;
+justify-content: center;
+text-align: center;
+height: 60%;
+border-radius: 20px;
+font-size: 1em;
+line-height: 10px;
+}
+
+body {
+text-align: center;
+  color: black;
+}
+
+#cubephoto {
+  display: inline-grid;
+}
+
+
+#forme textarea {
+  height: 4em;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 0.9em;
+  font-size: 1.5em;
+}
+
+#forme input {
+  height: 1.5em;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 1em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#forme button {
+font-size: 1.2em;
+text-transform: uppercase;
+font-weight: bolder;
+border: 3px solid #0038B8;
+color: white;
+background: transparent;
+line-height: 1em;
+padding: 0.6em 0.9em;
+cursor: pointer;
+background-color: #0038B8
+}
+
+#forme label {
+font-size: 1.4em;
+}
+
+#forme input,textarea {
+  display: inline-flex;
+}
+
+#CecileJohann {
+font-family: 'Over the Rainbow', cursive;
+font-size: 3em;
+}
+
+#email p {
+font-family: 'Handlee', cursive;
+font-size: 1.4em;
+color: black;
+}
+
+/* =================================
+  Base Layout Styles
+==================================== */
+
+/* ---- Layout Containers ---- */
+
+.container,
+.content {
+	margin: auto;
+
+}
+.container {
+	width: 94.02985075%;
+	max-width: 1260px;
+	padding: 0 2.25em 4em;
+	background: #fff;
+}
+.main-header {
+	text-align: center;
+	padding: 2.8em 0 3.8em;
+}
+.cube-container {
+	max-width: 200px;
+	text-align: center;
+	margin: 0 auto 4.5em;
+}
+/* ---- Page Elements ---- */
+
+.name {
+	font-size: 1.65em;
+	font-weight: 800;
+	margin: 0 0 1.5em;
+	line-height: 1;
+}
+.name span {
+	font-weight: 300;
+	margin-left: -7px;
+}
+.logo {
+	width: 45px;
+	margin-bottom: .4em;
+	cursor: pointer;
+}
+.button {
+	font-size: .8em;
+	color: #fff;
+	width: 90%;
+	line-height: 1.15;
+	font-weight: 700;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: .95em 0;
+	border-radius: .5em;
+	background: rgba(74,137,202, .8);
+	margin: auto;
+}
+/* ---- Photo Overlay ---- */
+
+.photo-desc {
+	font-size: .85em;
+	color: #fff;
+	padding: 1.1em 1em 0;
+
+}
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+/* =================================
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+	.cube-container {
+		float: left;
+		margin-left: 16.6%;
+	}
+}
+@media (min-width: 1025px) {
+	.cube-container:first-child {
+		margin-left: 0;
+	}
+	.cube-container:last-child{
+		float: right;
+	}
+	.content {
+		max-width: 900px;
+		margin: auto;
+	}
+}
+
+/* =================================
+  Button Transitions
+==================================== */
+
+.button {
+	transition: background .3s;
+}
+.button:hover {
+	background: rgba(74,137,202, 1);
+}
+
+/* =================================
+  Photo 3D Transforms & Transitions
+==================================== */
+
+.cube-container {
+	box-shadow: 0 18px 40px 5px rgba(0,0,0,.4);
+  perspective: 800px;
+}
+
+.photo-cube {
+  transition: all linear;
+  -webkit-transition: all linear;
+  width: 220px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation-name: example;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+@keyframes example {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
+}
+
+
+
+
+.front,
+.back,
+.left,
+.right {
+width: 100%;
+height: 100%;
+display: block;
+position: absolute;
+}
+
+.front {
+transform: translate3d(0,0,110px);
+}
+
+.back {
+transform: translateZ(-110px) rotateY(270deg);
+  transform-origin: center left;
+}
+
+.left {
+transform: rotateY(-270deg) translate3d(110px, 0, 0);
+  transform-origin: top right;
+}
+
+.right {
+transform: translateZ(-110px) rotateY(180deg);
+ }
